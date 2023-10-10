@@ -42,7 +42,7 @@ include_once ("connection/connection.php");
         }
         
         ?>
-        <form action="login/login.php" method="POST" class="mt-2 mx-auto">
+        <form action="login.php" method="POST" class="mt-2 mx-auto">
             <fieldset class="form-row reset p-4 align-items-center border border-primary ">
                 <legend class="reset text-light border border-primary px-2 py-1">Login</legend>
 
@@ -69,13 +69,7 @@ include_once ("connection/connection.php");
         <h1>¿Aún no estas registrado?</h1>
         <h3>Pincha aquí y registrate: </h3><a href="./registro.php">Registro</a></div>
     </div>
-    <?php 
-        if(isset($_SESSION["error_login"])){
-            $_SESSION["error_login"] = null;
-            session_unset($_SESSION["error_login"]);
-        }
-    ?>
-
+    
 </body>
 
 </html>
