@@ -69,7 +69,13 @@ include_once ("connection/connection.php");
         <h1>¿Aún no estas registrado?</h1>
         <h3>Pincha aquí y registrate: </h3><a href="./registro.php">Registro</a></div>
     </div>
-    
+    <?php 
+        if(isset($_SESSION["error_login"])){
+            $_SESSION["error_login"] = null;
+            session_unset($_SESSION["error_login"]);
+        }
+    ?>
+
 </body>
 
 </html>
