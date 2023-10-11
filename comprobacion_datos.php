@@ -81,6 +81,6 @@ if (isset($_POST["submit"])) {
     } else {
         $_SESSION["errores"] = $arrayErrores;
     }
-    header("Location: ../index.php");
+    header("Location: ../timeline.php");
 }
 ?>
