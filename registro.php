@@ -85,7 +85,7 @@
                 <div class="form-group row g-3 mt-1 mx-auto">
                     <label for="descripcion" class="col-sm-2 col-form-label text-primary">Descripción:</label>
                     <div class="col-sm-10">
-                        <input type="descripcion" id="descripcion" class="form-control text-info" name="descripcion"/>
+                        <textarea type="descripcion" id="descripcion" class="form-control text-info" name="descripcion" placeholder="Aqui va el cuerpo del mensaje"></textarea>
                     </div>
                 </div>
 

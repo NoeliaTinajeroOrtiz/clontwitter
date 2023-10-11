@@ -14,7 +14,7 @@
 
         if (password_verify($pass, $usuario["pass"])) {
             $_SESSION["usuario"] = $usuario;
-            header("Location: welcome.php");
+            //header("Location: welcome.php");
         } else {
             $_SESSION["error_login"] = "Login incorrecto";
             header("Location: ./index.php");
