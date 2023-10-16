@@ -36,6 +36,9 @@ include_once ("connection/connection.php");
 
 <body>
 
+    <?php if(isset($_SESSION["usuario"])): ?>
+
+
     <nav class="navbar navbar navbar-dark bf-info" style="height: 10vh;">
         <a class="navbar-brand mx-2">ClonTwitter</a>
         <a class="nav-link text-white" href="?q=a">All</a>
@@ -43,28 +46,33 @@ include_once ("connection/connection.php");
         <a href="../sessionSample/logout.php">Logout</a>
     </nav>
     <div id="subBody" class="container-fluid d-flex justify-content-center pt-5" style="min-height: 90vh;">
-    <div class="container">
-        <div class="card mb-3">
-            <div class="card-body">
-              <h5 class="card-title">noeliatinajero</h5>
-              <p class="card-text">Noelia Tinajero Prueba</p>
-              <p class="card-text"><small class="text-muted">Created 2023-10-10</small></p>
+        <div class="container">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">noeliatinajero</h5>
+                    <p class="card-text">Noelia Tinajero Prueba</p>
+                    <p class="card-text"><small class="text-muted">Created 2023-10-10</small></p>
+                </div>
+
+                <form action="publicar.php" method="POST" class="mt-2">
+                    <div class="row g-3 mt-2 mx-auto">
+                        <label for="tweet" class="form-label text-primary">Tweet: </label> <br>
+                        <textarea id="tweet" class="form-control text-info mt-2 w-10" name="tweet"
+                            placeholder="Escribe el tweet..." rows="5" cols="40" required=""></textarea>
+                        <input id="sendTweet" class="btn btn-primary btn-lg" type="submit" value="Send"
+                            name="submitTweet">
+                    </div>
+                </form>
+
             </div>
+        </div>
+        <div class="container">
+        </div>
 
-        <form action="publicar.php" method="POST" class="mt-2">
-          <div class="row g-3 mt-2 mx-auto">
-            <label for="tweet" class="form-label text-primary">Tweet: </label> <br>
-            <textarea id="tweet" class="form-control text-info mt-2 w-10" name="tweet" placeholder="Escribe el tweet..." rows="5" cols="40" required=""></textarea>
-            <input id="sendTweet" class="btn btn-primary btn-lg" type="submit" value="Send" name="submitTweet">
-          </div>
-        </form>
-
-        </div> 
     </div>
-    <div class="container">
-          </div>
-  
-  </div>
+    <?php else: ?>
+    <h1><?= "NO ESTAS LOGUEADO"?></h1>
+    <?php endif;?>
 
 
 
