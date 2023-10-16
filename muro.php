@@ -47,39 +47,8 @@ include_once ("connection/connection.php");
     </nav>
     <div id="subBody" class="container-fluid d-flex justify-content-center pt-5" style="min-height: 90vh;">
         <div class="container">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">noeliatinajero</h5>
-                    <p class="card-text">Noelia Tinajero Prueba</p>
-                    <p class="card-text"><small class="text-muted">Created 2023-10-10</small></p>
-                </div>
+            
 
-                <form action="publicar.php" method="POST" class="mt-2">
-                    <div class="row g-3 mt-2 mx-auto">
-                        <label for="tweet" class="form-label text-primary">Tweet: </label> <br>
-                        <textarea id="tweet" class="form-control text-info mt-2 w-10" name="tweet"
-                            placeholder="Escribe el tweet..." rows="5" cols="40" required=""></textarea>
-                        <input id="sendTweet" class="btn btn-primary btn-lg" type="submit" value="Send" name="submitTweet">
-                    </div>
-                </form>
-
-            </div>
-        </div>
-        <div class="container">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <div class="d-flex gap-2">
-                        <h5 class="card-titlle">
-                            <a href="./user.php?u=1">Admin</a>
-                        </h5>
-                        <a href="./follow.php?id=1">Follow</a>
-                        <a href="./unfollow.php?id=1">Unfollow</a>
-                    </div>
-                    <p class="card-text">Hola amigos</p>
-                    <p class="card-text">
-                        <small class="text-muted">Created 2023-10-10</small>
-                    </p>
-                </div>
             </div>
         </div>
 
