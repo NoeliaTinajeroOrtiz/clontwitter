@@ -7,3 +7,10 @@ CREATE TABLE `users_crud_php`.`usuarios` (
   `pass` BLOB NOT NULL,
   `createDate` DATE NULL,
   PRIMARY KEY (`id`));
+
+CREATE TABLE `usuarios_twitter`.`publicacion` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `userId` VARCHAR(45) NOT NULL,
+  `tweet` VARCHAR(45) NOT NULL,
+  `createDate` DATE NULL,
+  PRIMARY KEY (`id`));
