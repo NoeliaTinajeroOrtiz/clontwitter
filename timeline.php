@@ -38,28 +38,30 @@ include_once ("connection/connection.php");
 
     <?php if(isset($_SESSION["usuario"])): ?>
 
-
     <nav class="navbar navbar navbar-dark bf-info" style="height: 10vh;">
         <a class="navbar-brand mx-2">ClonTwitter</a>
-        <a class="nav-link text-white" href="muro.php">All</a>
+        <a class="nav-link text-white" href="?q=a">All</a>
         <a class="nav-link text-white" href="timeline.php">Follow</a>
         <a href="../sessionSample/logout.php">Logout</a>
     </nav>
     <div id="subBody" class="container-fluid d-flex justify-content-center pt-5" style="min-height: 90vh;">
         <div class="container">
             <div class="card mb-3">
+                
                 <div class="card-body">
-                    <h5 class="card-title">noeliatinajero</h5>
-                    <p class="card-text">Noelia Tinajero Prueba</p>
-                    <p class="card-text"><small class="text-muted">Created 2023-10-10</small></p>
+                    <h5 class="card-title"><?= $_SESSION["usuario"]['username'] ?></h5>
+                    <p class="card-text"><?= $_SESSION["usuario"]['descripcion'] ?></p>
+                    <p class="card-text"><small class="text-muted">Created </small><?= $_SESSION["usuario"]['createDate'] ?></p>
                 </div>
+                
 
                 <form action="publicar.php" method="POST" class="mt-2">
                     <div class="row g-3 mt-2 mx-auto">
                         <label for="tweet" class="form-label text-primary">Tweet: </label> <br>
                         <textarea id="tweet" class="form-control text-info mt-2 w-10" name="tweet"
                             placeholder="Escribe el tweet..." rows="5" cols="40" required=""></textarea>
-                        <input id="sendTweet" class="btn btn-primary btn-lg" type="submit" value="Send" name="submitTweet">
+                        <input id="sendTweet" class="btn btn-primary btn-lg" type="submit" value="Send"
+                            name="submitTweet">
                     </div>
                 </form>
 
