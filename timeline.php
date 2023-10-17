@@ -38,7 +38,6 @@ include_once ("connection/connection.php");
 
     <?php if(isset($_SESSION["usuario"])): ?>
 
-
     <nav class="navbar navbar navbar-dark bf-info" style="height: 10vh;">
         <a class="navbar-brand mx-2">ClonTwitter</a>
         <a class="nav-link text-white" href="?q=a">All</a>
@@ -48,11 +47,13 @@ include_once ("connection/connection.php");
     <div id="subBody" class="container-fluid d-flex justify-content-center pt-5" style="min-height: 90vh;">
         <div class="container">
             <div class="card mb-3">
+                
                 <div class="card-body">
-                    <h5 class="card-title">noeliatinajero</h5>
-                    <p class="card-text">Noelia Tinajero Prueba</p>
-                    <p class="card-text"><small class="text-muted">Created 2023-10-10</small></p>
+                    <h5 class="card-title"><?= $_SESSION["usuario"]['username'] ?></h5>
+                    <p class="card-text"><?= $_SESSION["usuario"]['descripcion'] ?></p>
+                    <p class="card-text"><small class="text-muted">Created </small><?= $_SESSION["usuario"]['createDate'] ?></p>
                 </div>
+                
 
                 <form action="publicar.php" method="POST" class="mt-2">
                     <div class="row g-3 mt-2 mx-auto">
