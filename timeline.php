@@ -47,13 +47,13 @@ include_once ("connection/connection.php");
     <div id="subBody" class="container-fluid d-flex justify-content-center pt-5" style="min-height: 90vh;">
         <div class="container">
             <div class="card mb-3">
-                
                 <div class="card-body">
                     <h5 class="card-title"><?= $_SESSION["usuario"]['username'] ?></h5>
                     <p class="card-text"><?= $_SESSION["usuario"]['descripcion'] ?></p>
-                    <p class="card-text"><small class="text-muted">Created </small><?= $_SESSION["usuario"]['createDate'] ?></p>
+                    <p class="card-text"><small class="text-muted">Created
+                        </small><?= $_SESSION["usuario"]['createDate'] ?></p>
                 </div>
-                
+
 
                 <form action="publicar.php" method="POST" class="mt-2">
                     <div class="row g-3 mt-2 mx-auto">
@@ -64,10 +64,25 @@ include_once ("connection/connection.php");
                             name="submitTweet">
                     </div>
                 </form>
-
             </div>
         </div>
         <div class="container">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="d-flex gap-2">
+                        <h5 class="card-titlle">
+                            <a href="./user.php?u=<?= $_SESSION["usuario"]['id'] ?>"><?= $_SESSION["usuario"]['username'] ?></a>
+                        </h5>
+                        <a href="./follow.php?id=<?= $_SESSION["usuario"]['id'] ?>">Follow</a>
+                        <a href="./unfollow.php?id=<?= $_SESSION["usuario"]['id'] ?>">Unfollow</a>
+                    </div>
+                    <p class="card-text">Hola amigos</p>
+                    <p class="card-text">
+                        <small class="text-muted">Created <?= $_SESSION["usuario"]['createDate'] ?></small>
+                    </p>
+                </div>
+            </div>
+
         </div>
 
     </div>
