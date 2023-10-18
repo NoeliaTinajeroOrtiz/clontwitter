@@ -14,3 +14,10 @@ CREATE TABLE `usuarios_twitter`.`publicacion` (
   `tweet` VARCHAR(45) NOT NULL,
   `createDate` DATE NULL,
   PRIMARY KEY (`id`));
+
+  CREATE TABLE `usuarios_twitter`.`seguidores` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `userId` VARCHAR(45) NOT NULL,
+  `tweet` VARCHAR(45) NOT NULL,
+  `createDate` DATE NULL,
+  PRIMARY KEY (`id`));
