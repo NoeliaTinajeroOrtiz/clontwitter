@@ -16,6 +16,8 @@ include_once ("connection/connection.php");
     <meta name="revised" content="Tuesday, February 28th, 2023, 23:00pm">
     <meta name="viewport" content="width=device-width, initial scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-edge, chrome1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <!-- Añado la fuente Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
